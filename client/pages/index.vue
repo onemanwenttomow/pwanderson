@@ -5,7 +5,7 @@
             <div class="flex flex-wrap overflow-hidden">
 
                 <div class="w-full overflow-hidden">
-                    <h1 id="name"><span>P</span><span>e</span><span>t</span><span>e</span><span>r</span> Anderson</h1>
+                    <h1 id="name"><span>P</span><span>e</span><span>t</span><span>e</span><span>r</span> W Anderson</h1>
                     <h3 id="title">Full Stack Developer</h3>
                     <a href="https://github.com/onemanwenttomow"><i class="fab fa-github fa-2x"></i></a>
                     <a href="https://www.linkedin.com/in/peter-w-anderson"><i class="fab fa-linkedin fa-2x"></i></a>
@@ -22,7 +22,7 @@
                     <h1 id="stack">Stack:</h1>
                     <h3 >
                         <ul >
-                            <li  v-for="stack in myStack" v-on:click="onStackClick(stack)" > {{ stack }}
+                            <li  v-for="stack in myStack" v-on:click="onStackClick(stack)" @click="selected = myStack.indexOf(stack)" :class="{highlight:myStack.indexOf(stack) == selected}" > {{ stack }}
                             </li>
                         </ul>
                     </h3>
@@ -43,6 +43,68 @@
 
     </div>
 </template>
+
+
+
+<script>
+
+    import axios from "axios";
+    export default {
+        asyncData() {
+            return new Promise((resolve, reject) => {
+                resolve({
+                    myStack: ["Javascript", "React", "Vue", "Node.js", "Express", "PostgreSQL", "MongoDB", "Redux", "Handlebars", "jQuery", "Socket.io", "Redis"],
+                    clickedOnStack: "",
+                    selected: undefined,
+                    isActive: true,
+                    myProjects: [
+                            {
+                                title: "Authors In Town",
+                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis"],
+                                description: "Users sign up, link their goodreads account to find their favourite authors and then are shown author events near them."
+                            },
+                            {
+                                title: "TartanBored",
+                                stack: ["Javascript", "Vue", "PostgreSQL"],
+                                description: "Blah blah!"
+                            }
+                        ],
+                        matchingProjects: []
+                })
+            })
+        },
+        computed: {
+            projectMatch: function() {
+                this.matchingProjects = [];
+                for (let i = 0; i < this.myProjects.length; i++) {
+                    if (this.myProjects[i].stack.indexOf(this.clickedOnStack) > -1) {
+                        this.matchingProjects.push(this.myProjects[i])
+                    }
+                    console.log("match!", this.matchingProjects.length);
+                }
+            }
+        },
+        methods: {
+            onStackClick: function(e) {
+                this.clickedOnStack = e;
+                console.log(this.clickedOnStack);
+                this.projectMatch;
+            }
+        },
+        head() {
+            return {
+                title: "🤖 Peter Anderson - Full Stack Developer Berlin",
+                meta: [
+                      {
+                        hid: "🤘",
+                        name: "🤖 Peter Anderson - Full Stack Developer Berlin",
+                        content: `🤖`
+                      }
+                ]
+          };
+        }
+    };
+</script>
 
 <style scoped>
 #app {
@@ -67,6 +129,18 @@
   justify-content: center;
   padding: 10vw;
   color: #283c63;
+}
+
+li.highlight {
+  background-color: #fbe8d3;
+  border-radius: 4px;
+  padding: 2px;
+}
+
+li.highlight:hover {
+    color: #283c63;
+    text-shadow: none;
+    cursor: pointer;
 }
 
 .about-links {
@@ -172,60 +246,3 @@ ul {
     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 </style>
-
-<script>
-    import axios from "axios";
-    export default {
-        asyncData() {
-            return new Promise((resolve, reject) => {
-                resolve({
-                    myStack: ["Javascript", "React", "Vue", "Node.js", "Express", "PostgreSQL", "MongoDB", "Redux", "Handlebars", "jQuery", "Socket.io", "Redis"],
-                    clickedOnStack: "",
-                    myProjects: [
-                            {
-                                title: "Authors In Town",
-                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis"],
-                                description: "Users sign up, link their goodreads account to find their favourite authors and then are shown author events near them."
-                            },
-                            {
-                                title: "TartanBored",
-                                stack: ["Javascript", "Vue", "PostgreSQL"],
-                                description: "Blah blah!"
-                            }
-                        ],
-                        matchingProjects: []
-                })
-            })
-        },
-        computed: {
-            projectMatch: function() {
-                this.matchingProjects = [];
-                for (let i = 0; i < this.myProjects.length; i++) {
-                    if (this.myProjects[i].stack.indexOf(this.clickedOnStack) > -1) {
-                        this.matchingProjects.push(this.myProjects[i])
-                    }
-                    console.log("match!", this.matchingProjects.length);
-                }
-            }
-        },
-        methods: {
-            onStackClick: function(e) {
-                this.clickedOnStack = e;
-                console.log(this.clickedOnStack);
-                this.projectMatch;
-            }
-        },
-        head() {
-            return {
-                title: "🤖 Peter Anderson - Full Stack Developer Berlin",
-                meta: [
-                      {
-                        hid: "🤘",
-                        name: "🤖 Peter Anderson - Full Stack Developer Berlin",
-                        content: `🤖`
-                      }
-                ]
-          };
-        }
-    };
-</script>
