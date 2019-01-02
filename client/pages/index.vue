@@ -7,9 +7,9 @@
                 <div class="w-full overflow-hidden">
                     <h1 id="name"><span>P</span><span>e</span><span>t</span><span>e</span><span>r</span> Anderson</h1>
                     <h3 id="title">Full Stack Developer</h3>
-                    <a href="https://github.com/onemanwenttomow"><li class="about-links">Github</li></a> |
-                    <a href="https://www.linkedin.com/in/peter-w-anderson"><li class="about-links">Linkedin</li></a> |
-                    <a href="https://www.codewars.com/users/dobebrief/">CodeWars <img src="https://www.codewars.com/users/dobebrief/badges/micro" alt="Codewars"></a>
+                    <a href="https://github.com/onemanwenttomow"><i class="fab fa-github fa-2x"></i></a>
+                    <a href="https://www.linkedin.com/in/peter-w-anderson"><i class="fab fa-linkedin fa-2x"></i></a>
+                    <a href="https://www.codewars.com/users/dobebrief/"><img src="https://www.codewars.com/users/dobebrief/badges/micro" alt="Codewars"></a>
                 </div>
 
             </div>
