@@ -1,4 +1,3 @@
-// client/pages/index.vue
 <template>
     <div id="app" class="flex flex-wrap overflow-hidden">
 
@@ -8,10 +7,11 @@
                 <div class="w-full overflow-hidden">
                     <h1 id="name"><span>P</span><span>e</span><span>t</span><span>e</span><span>r</span> Anderson</h1>
                     <h3 id="title">Full Stack Developer</h3>
-                    <a href="https://github.com/onemanwenttomow"><i class="fab fa-github fa-2x"></i></a>
-                    <a href="https://www.linkedin.com/in/peter-w-anderson"><i class="fab fa-linkedin fa-2x"></i></a>
-                    <a href="https://www.codewars.com/users/dobebrief/"><img src="https://www.codewars.com/users/dobebrief/badges/micro" alt="Codewars"></a>
+                    <a href="https://github.com/onemanwenttomow"><li class="about-links">Github</li></a> |
+                    <a href="https://www.linkedin.com/in/peter-w-anderson"><li class="about-links">Linkedin</li></a> |
+                    <a href="https://www.codewars.com/users/dobebrief/">CodeWars <img src="https://www.codewars.com/users/dobebrief/badges/micro" alt="Codewars"></a>
                 </div>
+
             </div>
         </div>
 
@@ -45,9 +45,6 @@
 </template>
 
 <style scoped>
-body {
-
-}
 #app {
   margin: 0;
   font-family: "Lucida Console", Monaco, monospace;
@@ -70,6 +67,12 @@ body {
   justify-content: center;
   padding: 10vw;
   color: #283c63;
+}
+
+.about-links {
+    padding: 0;
+    margin: 0;
+    color: #fbe8d3;
 }
 
 #name {
@@ -143,6 +146,10 @@ li:hover {
 li {
   display: inline;
   padding: 5px 5px 0 0;
+  -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+  -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+  -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+  -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
 ul {
@@ -156,6 +163,13 @@ ul {
 
 .matching-project {
   padding: 5px;
+}
+
+* {
+    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
+    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
+    -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 </style>
 

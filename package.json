@@ -12,12 +12,11 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.18.0",
-    "buefy": "^0.7.1",
     "express": "^4.16.4",
     "nuxt": "^2.3.4",
-    "nuxt-buefy": "^0.3.2",
     "serverless-apigw-binary": "^0.4.4",
-    "serverless-http": "^1.8.0"
+    "serverless-http": "^1.8.0",
+    "serverless-offline": "^3.31.3"
   },
   "devDependencies": {
     "serverless-domain-manager": "^2.6.9",

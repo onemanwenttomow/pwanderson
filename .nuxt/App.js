@@ -8,7 +8,7 @@ import _6f6c098b from '../client/layouts/default.vue'
 const layouts = { "_default": _6f6c098b }
 
 export default {
-  head: {"title":"Vue Nuxt Test","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Peter W Anderson - Full Stack Developer"}],"link":[],"style":[],"script":[]},
+  head: {"title":"Vue Nuxt Test","meta":[{"charset":"utf-8"},{"name":"viewport","content":"width=device-width, initial-scale=1"},{"hid":"description","name":"description","content":"Nuxt.js project"}],"link":[],"style":[],"script":[]},
 
   render(h, props) {
     const loadingEl = h('nuxt-loading', { ref: 'loading' })
@@ -78,6 +78,8 @@ export default {
     },
 
     setLayout(layout) {
+      if(layout && typeof layout !== 'string') throw new Error('[nuxt] Avoid using non-string value as layout property.')
+
       if (!layout || !layouts['_' + layout]) {
         layout = 'default'
       }
