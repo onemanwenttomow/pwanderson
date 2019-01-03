@@ -2,6 +2,8 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _4c24f6ba = () => interopDefault(import('../client/pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
+const _740db22c = () => interopDefault(import('../client/pages/authorsintown/index.vue' /* webpackChunkName: "pages/authorsintown/index" */))
 const _36e07300 = () => interopDefault(import('../client/pages/dogs/index.vue' /* webpackChunkName: "pages/dogs/index" */))
 const _7fdbe992 = () => interopDefault(import('../client/pages/dogs/_breed.vue' /* webpackChunkName: "pages/dogs/_breed" */))
 const _5e5a803c = () => interopDefault(import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */))
@@ -64,6 +66,14 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/about",
+      component: _4c24f6ba,
+      name: "about"
+    }, {
+      path: "/authorsintown",
+      component: _740db22c,
+      name: "authorsintown"
+    }, {
       path: "/dogs",
       component: _36e07300,
       name: "dogs"
