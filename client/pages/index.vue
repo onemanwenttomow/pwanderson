@@ -26,11 +26,17 @@
                             </li>
                         </ul>
                     </h3>
-
+        <br>
         <div>
             <ul id="matching-projects">
                 <li v-for="project in matchingProjects" class="matching-project">
-                    {{ project.title }}
+                    <nuxt-link :to="project.link">
+                    <h4>{{ project.title }}</h4>
+                    <p class="text-sm">{{ project.description }}</p>
+                    <button class="project-button">
+                            Project Details
+                    </button>
+                    </nuxt-link>
                 </li>
             </ul>
         </div>
@@ -53,20 +59,44 @@
         asyncData() {
             return new Promise((resolve, reject) => {
                 resolve({
-                    myStack: ["Javascript", "React", "Vue", "Node.js", "Express", "PostgreSQL", "MongoDB", "Redux", "Handlebars", "jQuery", "Socket.io", "Redis"],
+                    myStack: [
+                        "Javascript",
+                        "React",
+                        "Vue",
+                        "Node.js",
+                        "Express",
+                        "PostgreSQL",
+                        "MongoDB",
+                        "Redux",
+                        "Handlebars",
+                        "jQuery",
+                        "Socket.io",
+                        "Redis",
+                        "Nuxt",
+                        "Tailwind CSS",
+                        "Bootstrap"
+                    ],
                     clickedOnStack: "",
                     selected: undefined,
                     isActive: true,
                     myProjects: [
                             {
                                 title: "Authors In Town",
-                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis"],
+                                link: "/authorsintown",
+                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis", "Node.js", "Express"],
                                 description: "Users sign up, link their goodreads account to find their favourite authors and then are shown author events near them."
                             },
                             {
                                 title: "TartanBored",
+                                link: "/tartanbored",
                                 stack: ["Javascript", "Vue", "PostgreSQL"],
-                                description: "Blah blah!"
+                                description: "A website where users can upload tartans, comment and search by tag. Built in Vue.js"
+                            },
+                            {
+                                title: "TartanBored",
+                                link: "/authorsintown",
+                                stack: ["Javascript", "Vue", "PostgreSQL"],
+                                description: "A website where users can upload tartans, comment and search by tag. Built in Vue.js"
                             }
                         ],
                         matchingProjects: []
@@ -80,8 +110,9 @@
                     if (this.myProjects[i].stack.indexOf(this.clickedOnStack) > -1) {
                         this.matchingProjects.push(this.myProjects[i])
                     }
-                    console.log("match!", this.matchingProjects.length);
                 }
+                console.log(this.matchingProjects);
+                console.log();
             }
         },
         methods: {
@@ -93,11 +124,11 @@
         },
         head() {
             return {
-                title: "🤖 Peter Anderson - Full Stack Developer Berlin",
+                title: "Peter Anderson - Full Stack Developer Berlin 🤖",
                 meta: [
                       {
                         hid: "🤘",
-                        name: "🤖 Peter Anderson - Full Stack Developer Berlin",
+                        name: "Peter Anderson - Full Stack Developer Berlin 🤖",
                         content: `🤖`
                       }
                 ]
@@ -220,10 +251,6 @@ li:hover {
 li {
   display: inline;
   padding: 5px 5px 0 0;
-  -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
-  -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
-  -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-  -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
 ul {
@@ -232,17 +259,33 @@ ul {
 
 #matching-projects {
   background-color: #fbe8d3;
-  border-radius: 2px;
+  border-radius: 4px;
+  transition:.5s;
+  line-height: 1.1em;
 }
 
 .matching-project {
   padding: 5px;
+  transition:.5s;
+  display: block;
+}
+.matching-project:hover {
+    color: #283c63;
+    text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
+    cursor: pointer;
 }
 
-* {
-    -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
-    -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
-    -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
-    -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+.project-button {
+    background-color: #928a97;
+    color: #fbe8d3;
+    padding: 4px;
+    border-radius: 4px;
 }
+
+.project-button:hover {
+    background-color: #283c63;
+    transition:.5s;
+}
+
+
 </style>
