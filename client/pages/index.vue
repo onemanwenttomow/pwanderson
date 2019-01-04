@@ -52,8 +52,28 @@
 
 
 <script>
-    import axios from "axios";
+    import { mapState, mapActions } from 'vuex';
+
     export default {
+        fetch({ store }) {
+
+        },
+        computed: {
+            ...mapState([
+                'myProjects',
+                'leftLink',
+                'rightLink'
+            ]),
+            projectMatch: function() {
+                this.matchingProjects = [];
+                for (let i = 0; i < this.myProjects.length; i++) {
+                    if (this.myProjects[i].stack.indexOf(this.clickedOnStack) > -1) {
+                        this.matchingProjects.push(this.myProjects[i])
+                    }
+                }
+                console.log(this.state);
+            }
+        },
         asyncData() {
             return new Promise((resolve, reject) => {
                 resolve({
@@ -78,47 +98,9 @@
                     clickedOnStack: "",
                     selected: undefined,
                     isActive: true,
-                    myProjects: [
-                            {
-                                title: "Authors In Town",
-                                link: "/authorsintown",
-                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis", "Node.js", "Express", "AWS"],
-                                description: "Users sign up, link their goodreads account to find their favourite authors and then are shown author events near them."
-                            },
-                            {
-                                title: "TartanBored",
-                                link: "/tartanbored",
-                                stack: ["Javascript", "Vue", "PostgreSQL", "Node.js", "Express", "AWS"],
-                                description: "A website where users can upload tartans, comment and search by tag. Built in Vue.js"
-                            },
-                            {
-                                title: "DizzyFrinks Social Network",
-                                link: "/dizzyfrinks",
-                                stack: ["Javascript", "React", "Redux", "PostgreSQL","AWS", "Socket.io"],
-                                description: "A social network for the website DizzyFrinks.com built with React, Redux and Socket.io"
-                            },
-                            {
-                                title: "PWAnderson",
-                                link: "/pwanderson",
-                                stack: ["Javascript", "Vue", "TailwindCSS", "Nuxt.js","AWS"],
-                                description: "My personal portfolio App is built with serverless-side rendering, Vue.js, Nuxt.js and AWS Lambda"
-                            }
-                        ],
-                        matchingProjects: []
+                    matchingProjects: []
                 })
             })
-        },
-        computed: {
-            projectMatch: function() {
-                this.matchingProjects = [];
-                for (let i = 0; i < this.myProjects.length; i++) {
-                    if (this.myProjects[i].stack.indexOf(this.clickedOnStack) > -1) {
-                        this.matchingProjects.push(this.myProjects[i])
-                    }
-                }
-                console.log(this.matchingProjects);
-                console.log();
-            }
         },
         methods: {
             onStackClick: function(e) {
