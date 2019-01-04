@@ -17,6 +17,9 @@ export default {
 </script>
 
 <style >
+body {
+    background-color: #283c63;
+}
 #app {
     position: absolute;
   margin: 0;
@@ -50,7 +53,7 @@ export default {
 }
 
 .about {
-  height: 93.5vh;
+  /* height: 94vh; */
   background-color: #283c63;
   color: #fbe8d3;
   display: flex;
@@ -58,6 +61,28 @@ export default {
   justify-content: center;
   padding: 10vw;
   cursor: context-menu;
+}
+
+.individual-project {
+    background-color: #283c63;
+    color: #fbe8d3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2vw;
+    cursor: context-menu;
+}
+
+.project-image {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+}
+
+.project-description {
+    padding: 20px;
 }
 .projects {
   display: flex;
@@ -198,6 +223,7 @@ ul {
     -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
+
 
 
 </style>

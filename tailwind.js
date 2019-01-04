@@ -50,11 +50,11 @@ let colors = {
   'grey-darkest': '#3d4852',
   'grey-darker': '#606f7b',
   'grey-dark': '#8795a1',
-  'grey': '#b8c2cc',
+  'grey': '#928a97',
   'grey-light': '#dae1e7',
   'grey-lighter': '#f1f5f8',
   'grey-lightest': '#f8fafc',
-  'white': '#ffffff',
+  'white': '#fbe8d3',
 
   'red-darkest': '#3b0d0c',
   'red-darker': '#621b18',
@@ -99,7 +99,7 @@ let colors = {
   'blue-darkest': '#12283a',
   'blue-darker': '#1c3d5a',
   'blue-dark': '#2779bd',
-  'blue': '#3490dc',
+  'blue': '#283c63',
   'blue-light': '#6cb2eb',
   'blue-lighter': '#bcdefa',
   'blue-lightest': '#eff8ff',
@@ -123,7 +123,7 @@ let colors = {
   'pink-darkest': '#451225',
   'pink-darker': '#6f213f',
   'pink-dark': '#eb5286',
-  'pink': '#f66d9b',
+  'pink': '#f85f73',
   'pink-light': '#fa7ea8',
   'pink-lighter': '#ffbbca',
   'pink-lightest': '#ffebef',
@@ -507,6 +507,7 @@ module.exports = {
     '4/5': '80%',
     '1/6': '16.66667%',
     '5/6': '83.33333%',
+    '1/8': '12.5',
     'full': '100%',
     'screen': '100vw',
   },
@@ -546,7 +547,7 @@ module.exports = {
     '48': '12rem',
     '64': '16rem',
     'full': '100%',
-    'screen': '100vh',
+    'screen': '93.5vh',
   },
 
 
@@ -589,7 +590,7 @@ module.exports = {
   minHeight: {
     '0': '0',
     'full': '100%',
-    'screen': '100vh',
+    'screen': '93.5vh',
   },
 
 

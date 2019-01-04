@@ -1,6 +1,6 @@
 <template>
     <div id="app" class="flex flex-wrap overflow-hidden">
-        <div class="about w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+        <div class="min-h-screen md:h-screen about w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div class="flex flex-wrap overflow-hidden">
 
                 <div class="w-full overflow-hidden">
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <div class="projects w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
+        <div class="min-h-screen projects w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div class="flex flex-wrap overflow-hidden">
 
                 <div class="w-full overflow-hidden">
@@ -70,8 +70,9 @@
                         "jQuery",
                         "Socket.io",
                         "Redis",
-                        "Nuxt",
-                        "Tailwind CSS",
+                        "Nuxt.js",
+                        "TailwindCSS",
+                        "AWS",
                         "Bootstrap"
                     ],
                     clickedOnStack: "",
@@ -81,20 +82,26 @@
                             {
                                 title: "Authors In Town",
                                 link: "/authorsintown",
-                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis", "Node.js", "Express"],
+                                stack: ["Javascript", "React", "Redux", "PostgreSQL", "Redis", "Node.js", "Express", "AWS"],
                                 description: "Users sign up, link their goodreads account to find their favourite authors and then are shown author events near them."
                             },
                             {
                                 title: "TartanBored",
                                 link: "/tartanbored",
-                                stack: ["Javascript", "Vue", "PostgreSQL"],
+                                stack: ["Javascript", "Vue", "PostgreSQL", "Node.js", "Express", "AWS"],
                                 description: "A website where users can upload tartans, comment and search by tag. Built in Vue.js"
                             },
                             {
-                                title: "TartanBored",
-                                link: "/authorsintown",
-                                stack: ["Javascript", "Vue", "PostgreSQL"],
-                                description: "A website where users can upload tartans, comment and search by tag. Built in Vue.js"
+                                title: "DizzyFrinks Social Network",
+                                link: "/dizzyfrinks",
+                                stack: ["Javascript", "React", "Redux", "PostgreSQL","AWS", "Socket.io"],
+                                description: "A social network for the website DizzyFrinks.com built with React, Redux and Socket.io"
+                            },
+                            {
+                                title: "PWAnderson",
+                                link: "/pwanderson",
+                                stack: ["Javascript", "Vue", "TailwindCSS", "Nuxt.js","AWS"],
+                                description: "My personal portfolio App is built with serverless-side rendering, Vue.js, Nuxt.js and AWS Lambda"
                             }
                         ],
                         matchingProjects: []
@@ -145,7 +152,7 @@
  }
  @keyframes acrossIn {
    0% {
-     transform: translate3d(-100%, 0, 0);
+     transform: translate3d(100%, 0, 0);
    }
    100% {
      transform: translate3d(0, 0, 0);
@@ -156,7 +163,7 @@
      transform: translate3d(0, 0, 0);
    }
    100% {
-     transform: translate3d(100%, 0, 0);
+     transform: translate3d(-100%, 0, 0);
    }
  }
 </style>

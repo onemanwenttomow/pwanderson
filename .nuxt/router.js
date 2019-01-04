@@ -4,8 +4,11 @@ import { interopDefault } from './utils'
 
 const _4c24f6ba = () => interopDefault(import('../client/pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _740db22c = () => interopDefault(import('../client/pages/authorsintown/index.vue' /* webpackChunkName: "pages/authorsintown/index" */))
-const _36e07300 = () => interopDefault(import('../client/pages/dogs/index.vue' /* webpackChunkName: "pages/dogs/index" */))
-const _7fdbe992 = () => interopDefault(import('../client/pages/dogs/_breed.vue' /* webpackChunkName: "pages/dogs/_breed" */))
+const _395f38bc = () => interopDefault(import('../client/pages/cv/index.vue' /* webpackChunkName: "pages/cv/index" */))
+const _2d34554c = () => interopDefault(import('../client/pages/dizzyfrinks/index.vue' /* webpackChunkName: "pages/dizzyfrinks/index" */))
+const _1259f324 = () => interopDefault(import('../client/pages/legalstuff/index.vue' /* webpackChunkName: "pages/legalstuff/index" */))
+const _0db5a5c4 = () => interopDefault(import('../client/pages/pwanderson/index.vue' /* webpackChunkName: "pages/pwanderson/index" */))
+const _69c214b5 = () => interopDefault(import('../client/pages/tartanbored/index.vue' /* webpackChunkName: "pages/tartanbored/index" */))
 const _5e5a803c = () => interopDefault(import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -74,13 +77,25 @@ export function createRouter() {
       component: _740db22c,
       name: "authorsintown"
     }, {
-      path: "/dogs",
-      component: _36e07300,
-      name: "dogs"
+      path: "/cv",
+      component: _395f38bc,
+      name: "cv"
     }, {
-      path: "/dogs/:breed",
-      component: _7fdbe992,
-      name: "dogs-breed"
+      path: "/dizzyfrinks",
+      component: _2d34554c,
+      name: "dizzyfrinks"
+    }, {
+      path: "/legalstuff",
+      component: _1259f324,
+      name: "legalstuff"
+    }, {
+      path: "/pwanderson",
+      component: _0db5a5c4,
+      name: "pwanderson"
+    }, {
+      path: "/tartanbored",
+      component: _69c214b5,
+      name: "tartanbored"
     }, {
       path: "/",
       component: _5e5a803c,
