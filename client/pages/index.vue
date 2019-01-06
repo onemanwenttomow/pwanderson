@@ -86,6 +86,7 @@
                         "PostgreSQL",
                         "MongoDB",
                         "Redux",
+                        "Vuex",
                         "Handlebars",
                         "jQuery",
                         "Socket.io",

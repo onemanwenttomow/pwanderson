@@ -1,11 +1,7 @@
 <template>
     <div>
         <div class="flex justify-center">
-            <div class="flex min-h-screen w-1/8 bg-blue h-12 justify-center items-center">
-                <nuxt-link :to="leftLink">
-                    <i class="fas fa-chevron-left fa-3x cursor-pointer"></i>
-                </nuxt-link>
-            </div>
+            <leftchevron />
             <div class="w-3/4 h-12">
                 <div class="individual-project">
                     <h1>Authors In Town</h1>
@@ -20,11 +16,7 @@
 
                 </div>
             </div>
-            <div class="min-h-screen w-1/8 bg-blue h-12 flex justify-center items-center">
-                <nuxt-link :to="rightLink">
-                    <i class="fas fa-chevron-right fa-3x cursor-pointer"></i>
-                </nuxt-link>
-            </div>
+            <rightchevron />
         </div>
 
 
@@ -33,10 +25,13 @@
 </template>
 
 <script>
-import axios from "axios";
 import { mapState, mapActions } from 'vuex';
+import leftchevron from "~/components/leftchevron";
+import rightchevron from "~/components/rightchevron";
+
 
 export default {
+    components: { leftchevron, rightchevron },
     fetch({ store }) {
 
     },

@@ -28,7 +28,7 @@ const createStore = () => {
                 {
                     title: "PWAnderson",
                     link: "/pwanderson",
-                    stack: ["Javascript", "Vue", "TailwindCSS", "Nuxt.js","AWS"],
+                    stack: ["Javascript", "Vue", "TailwindCSS", "Nuxt.js", "AWS", "Vuex"],
                     description: "My personal portfolio App is built with serverless-side rendering, Vue.js, Nuxt.js and AWS Lambda"
                 }
             ],
