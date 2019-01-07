@@ -3,7 +3,6 @@
   <div >
     <navbar />
     <nuxt />
-
   </div>
 </template>
 
@@ -17,15 +16,15 @@ export default {
 </script>
 
 <style >
-body {
-    background-color: #283c63;
-}
+
+body { background-color: #283c63; }
+
 #app {
     position: absolute;
-  margin: 0;
-  font-family: "Lucida Console", Monaco, monospace;
-  background-color: #f85f73;
-  display: flex;
+    margin: 0;
+    font-family: "Lucida Console", Monaco, monospace;
+    background-color: #f85f73;
+    display: flex;
 }
 
 #nav {
@@ -53,7 +52,6 @@ body {
 }
 
 .about {
-  /* height: 94vh; */
   background-color: #283c63;
   color: #fbe8d3;
   display: flex;
@@ -74,16 +72,21 @@ body {
     cursor: context-menu;
 }
 
-.project-image {
-    width: 100%;
+.image-container {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
 }
 
-.project-description {
-    padding: 20px;
+.project-image {
+    width: 100%;
+    padding:1px;
+    border:1px solid #928a97;
+    background-color:#fbe8d3;
 }
+
+.project-description { padding: 20px; }
+
 .projects {
   display: flex;
   align-items: center;
@@ -110,30 +113,20 @@ li.highlight:hover {
     color: #fbe8d3;
 }
 
-#name {
-  padding: 10px 0 5px 0;
-}
+#name { padding: 10px 0 5px 0; }
 
-#title {
-  padding: 0 0 10px 0;
-}
+#title { padding: 0 0 10px 0; }
 
-h1 {
-  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
-}
+h1 { text-shadow: 2px 4px 3px rgba(0,0,0,0.3); }
 
 a {
   color: inherit;
   text-decoration: inherit;
 }
 
-#stack {
-  padding-bottom: 10px;
-}
+#stack { padding-bottom: 10px; }
 
-#marketing {
-  padding-bottom: 5px;
-}
+#marketing { padding-bottom: 5px; }
 
 h1 > span {
   color: #fbe8d3;
@@ -154,9 +147,7 @@ i {
   transition:.5s;
 }
 
-i:hover {
-  color: #f85f73;
-}
+i:hover { color: #f85f73; }
 
 h1 > span:hover {
   color: #f85f73;
@@ -183,9 +174,7 @@ li {
   padding: 5px 5px 0 0;
 }
 
-ul {
-  padding: 0;
-}
+ul { padding: 0; }
 
 #matching-projects {
   background-color: #fbe8d3;
@@ -199,6 +188,7 @@ ul {
   transition:.5s;
   display: block;
 }
+
 .matching-project:hover {
     color: #283c63;
     text-shadow: 0px 0px 0px rgba(0,0,0,0.3);
@@ -217,13 +207,13 @@ ul {
     transition:.5s;
 }
 
+
+
 * {
     -webkit-touch-callout:none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust:none;             /* prevent webkit from resizing text to fit */
     -webkit-tap-highlight-color:rgba(0,0,0,0); /* prevent tap highlight color / shadow */
     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
-
-
 
 </style>

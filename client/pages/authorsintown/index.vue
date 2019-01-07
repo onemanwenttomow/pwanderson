@@ -5,23 +5,30 @@
             <div class="w-3/4 h-12">
                 <div class="individual-project">
                     <h1>Authors In Town</h1>
-                    <p class="project-description">A social network for the website DizzyFrinks.com built with React, Redux and Socket.io. Features include live chat, friend request and more. </p>
-                    <a href="https://github.com/onemanwenttomow/dizzyfrinks-socialnetwork">
-                        <button class="bg-pink hover:bg-grey text-white font-bold py-2 px-4 rounded">
-                            View code on GitHub
-                        </button>
-                    </a>
-                    <img class="project-image" src="https://s3.amazonaws.com/pwanderson/dizzyfinks-preview+(1).PNG" alt="">
-                    <img class="project-image" src="https://s3.amazonaws.com/pwanderson/socialnetworkpreview-min.PNG" alt="">
-
+                    <p class="project-description">AuthorsInTown is built with React/Redux/Redis and uses the goodreads api to find a users favourite authors and then shows local events they might be interested in. </p>
+                    <div>
+                        <a class="inline" href="https://github.com/onemanwenttomow/authors-in-town">
+                            <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
+                                View code on GitHub
+                            </button>
+                        </a>
+                        <a class="inline" href="https://authorsintown.herokuapp.com/">
+                            <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
+                                Visit Site
+                            </button>
+                        </a>
+                    </div>
+                    <div class="image-container">
+                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownpreview-min.PNG" alt="">
+                    </div>
+                    <div class="image-container">
+                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownloggedin-min.PNG" alt="">
+                    </div>
                 </div>
             </div>
             <rightchevron />
         </div>
-
-
     </div>
-
 </template>
 
 <script>
@@ -35,21 +42,12 @@ export default {
     fetch({ store }) {
 
     },
-    mounted() {
-        console.log("mounted!!!!: ");
-        console.log($nuxt.$route.name);
-        this.getLeftAndRightLinks
-    },
     computed: {
         ...mapState([
             'myProjects',
             'leftLink',
             'rightLink'
-        ]),
-        getLeftAndRightLinks: function() {
-            console.log("getLeftAndRightLinks!!!!: ", $nuxt.$route.name);
-            this.$store.dispatch('getProject', $nuxt.$route.name)
-        }
+        ])
     },
     head() {
         return {

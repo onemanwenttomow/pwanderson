@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-screen w-1/8 bg-blue h-12 flex justify-center items-center">
+    <div class="min-h-screen w-1/8 bg-blue h-12 flex justify-center items-center text-right">
         <nuxt-link :to="rightLink">
             <i class="md:w-12 fas fa-chevron-right fa-2x cursor-pointer"></i>
         </nuxt-link>
@@ -23,7 +23,6 @@ export default {
             'rightLink'
         ]),
         getLeftAndRightLinks: function() {
-            console.log("getLeftAndRightLinks!!!!: ", $nuxt.$route.name);
             this.$store.dispatch('getProject', $nuxt.$route.name)
         }
     },

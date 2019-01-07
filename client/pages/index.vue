@@ -3,6 +3,12 @@
         <div class="min-h-screen md:h-screen about w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div class="flex flex-wrap overflow-hidden">
 
+                <div class="absolute down-chevron md:hidden">
+                    <a href="#stack" >
+                        <i class="fas fa-chevron-down fa-2x"></i>
+                    </a>
+                </div>
+
                 <div class="w-full overflow-hidden">
                     <h1 id="name"><span>P</span><span>e</span><span>t</span><span>e</span><span>r</span> W Anderson</h1>
                     <h3 id="title">Full Stack Developer</h3>
@@ -16,7 +22,6 @@
 
         <div class="min-h-screen projects w-full overflow-hidden sm:w-full md:w-1/2 lg:w-1/2 xl:w-1/2">
             <div class="flex flex-wrap overflow-hidden">
-
                 <div class="w-full overflow-hidden">
                     <h1 id="stack">Stack:</h1>
                     <h3 >
@@ -25,27 +30,26 @@
                             </li>
                         </ul>
                     </h3>
-        <br>
-        <div>
-            <ul id="matching-projects">
-                <li v-for="project in matchingProjects" class="matching-project">
-                    <nuxt-link :to="project.link">
-                    <h4>{{ project.title }}</h4>
-                    <p class="text-sm">{{ project.description }}</p>
-                    <button class="project-button">
-                            Project Details
-                    </button>
-                    </nuxt-link>
-                </li>
-            </ul>
-        </div>
-        <br>
-        <h3 id="marketing">Marketing:</h3>
-        <h5>SEO | PPC (Adwords, Bing) | Facebook Ads | Email Marketing | Affiliate Marketing</h5>
+                    <br>
+                    <div>
+                        <ul id="matching-projects">
+                            <li v-for="project in matchingProjects" class="matching-project">
+                                <nuxt-link :to="project.link">
+                                <h4>{{ project.title }}</h4>
+                                <p class="text-sm">{{ project.description }}</p>
+                                <button class="project-button">
+                                        Project Details
+                                </button>
+                                </nuxt-link>
+                            </li>
+                        </ul>
+                    </div>
+                    <br>
+                    <h3 id="marketing">Marketing:</h3>
+                    <h5>SEO | PPC (Adwords, Bing) | Facebook Ads | Email Marketing | Affiliate Marketing</h5>
                 </div>
             </div>
         </div>
-
     </div>
 </template>
 
@@ -62,7 +66,8 @@
             ...mapState([
                 'myProjects',
                 'leftLink',
-                'rightLink'
+                'rightLink',
+                'myStack'
             ]),
             projectMatch: function() {
                 this.matchingProjects = [];
@@ -71,31 +76,11 @@
                         this.matchingProjects.push(this.myProjects[i])
                     }
                 }
-                console.log(this.state);
             }
         },
         asyncData() {
             return new Promise((resolve, reject) => {
                 resolve({
-                    myStack: [
-                        "Javascript",
-                        "React",
-                        "Vue",
-                        "Node.js",
-                        "Express",
-                        "PostgreSQL",
-                        "MongoDB",
-                        "Redux",
-                        "Vuex",
-                        "Handlebars",
-                        "jQuery",
-                        "Socket.io",
-                        "Redis",
-                        "Nuxt.js",
-                        "TailwindCSS",
-                        "AWS",
-                        "Bootstrap"
-                    ],
                     clickedOnStack: "",
                     selected: undefined,
                     isActive: true,
@@ -106,7 +91,6 @@
         methods: {
             onStackClick: function(e) {
                 this.clickedOnStack = e;
-                console.log(this.clickedOnStack);
                 this.projectMatch;
             }
         },
@@ -125,7 +109,11 @@
     };
 </script>
 
-<style>
+<style scoped>
+.down-chevron {
+    right: 15%;
+    top: 40%;
+}
    /* Transitions using the page hook */
    .page-enter-active {
    animation: acrossIn .40s ease-out both;

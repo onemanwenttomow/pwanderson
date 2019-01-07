@@ -23,7 +23,6 @@ export default {
             'rightLink'
         ]),
         getLeftAndRightLinks: function() {
-            console.log("getLeftAndRightLinks!!!!: ", $nuxt.$route.name);
             this.$store.dispatch('getProject', $nuxt.$route.name)
         }
     },

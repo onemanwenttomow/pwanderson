@@ -32,43 +32,49 @@ const createStore = () => {
                     description: "My personal portfolio App is built with serverless-side rendering, Vue.js, Nuxt.js and AWS Lambda"
                 }
             ],
+            myStack: [
+                "Javascript",
+                "React",
+                "Vue",
+                "Node.js",
+                "Express",
+                "PostgreSQL",
+                "MongoDB",
+                "Redux",
+                "Vuex",
+                "Handlebars",
+                "jQuery",
+                "Socket.io",
+                "Redis",
+                "Nuxt.js",
+                "TailwindCSS",
+                "AWS",
+                "Bootstrap"
+            ]
         },
         mutations: {
             UPDATE_LEFT_LINK: (state, link) => {
-                console.log("left link update mutation!", link);
                 state.leftLink = link;
             },
             UPDATE_RIGHT_LINK: (state, link) => {
-                console.log("right link update mutation!", link);
-
                 state.rightLink = link;
             }
         },
         actions: {
             getProject(state, payload) {
-                console.log("payload: ", payload);
                 for (let i = 0; i < state.state.myProjects.length; i++) {
-                    // console.log(state.state.myProjects[i].link);
                     if (state.state.myProjects[i].link.indexOf(payload) > -1) {
-                        console.log(state.state.myProjects[i].link);
                         if (i === 0) {
-                            console.log("no left match!");
-                            console.log("rightlink: ", state.state.myProjects[i +1].link);
                             state.commit('UPDATE_RIGHT_LINK', state.state.myProjects[i +1].link);
                             state.commit('UPDATE_LEFT_LINK', "/");
-
                             return;
                         }
                         if (i === state.state.myProjects.length -1) {
-                            console.log("no right match!");
-                            console.log("leftlink: ", state.state.myProjects[i -1].link);
                             state.commit('UPDATE_LEFT_LINK', state.state.myProjects[i -1].link);
                             state.commit('UPDATE_RIGHT_LINK', "/");
 
                             return;
                         }
-                        console.log("leftlink: ", state.state.myProjects[i -1].link);
-                        console.log("rightlink: ", state.state.myProjects[i +1].link);
                         state.commit('UPDATE_RIGHT_LINK', state.state.myProjects[i +1].link);
                         state.commit('UPDATE_LEFT_LINK', state.state.myProjects[i -1].link);
 
