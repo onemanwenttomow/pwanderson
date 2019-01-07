@@ -17,12 +17,14 @@ export default {
 
 <style >
 
-body { background-color: #283c63; }
+body {
+    background-color: #283c63;
+    font-family: "Lucida Console", Monaco, monospace;
+ }
 
 #app {
     position: absolute;
     margin: 0;
-    font-family: "Lucida Console", Monaco, monospace;
     background-color: #f85f73;
     display: flex;
 }
@@ -68,7 +70,7 @@ body { background-color: #283c63; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-top: 2vw;
+    padding-top: 4vw;
     cursor: context-menu;
 }
 

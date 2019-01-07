@@ -43,12 +43,12 @@ export default {
     },
     head() {
         return {
-            title: "Dizzyfrinks Social Network",
+            title: "PWAnderson project",
             meta: [
                 {
-                    hid: "Dizzyfrinks Social Network",
-                    name: "Dizzyfrinks Social Network",
-                    content: `A social network for the website DizzyFrinks.com built with React.`
+                    hid: "PWAnderson project",
+                    name: "PWAnderson project",
+                    content: `This site is built with Vue.js and Nuxt.js and uses serverless-side rendering as well as using AWS Lambda. For learning purposes I also added in Vuex for state management and TailwindCSS for the CSS. `
                 }
             ]
         };

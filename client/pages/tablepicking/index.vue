@@ -4,25 +4,19 @@
             <leftchevron />
             <div class="w-3/4 h-12">
                 <div class="individual-project">
-                    <h1>Authors In Town</h1>
-                    <p class="project-description">AuthorsInTown is built with React/Redux/Redis and uses the goodreads api to find a users favourite authors and then shows local events they might be interested in. </p>
+                    <h1>Table Picking React App</h1>
+                    <p class="project-description">
+                        A simple React App that allows users to pick where they want to go for lunch. The app hits the foursquare API and gets 3 options for where to go and then users can vote on which one they want.
+                    </p>
                     <div>
-                        <a class="inline" href="https://github.com/onemanwenttomow/authors-in-town">
+                        <a class="inline" href="https://github.com/onemanwenttomow/table-picking">
                             <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
                                 View code on GitHub
                             </button>
                         </a>
-                        <a class="inline" href="https://authorsintown.herokuapp.com/">
-                            <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
-                                Visit Site
-                            </button>
-                        </a>
                     </div>
                     <div class="image-container">
-                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownpreview-min.PNG" alt="">
-                    </div>
-                    <div class="image-container">
-                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownloggedin-min.PNG" alt="">
+                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/table-picker-min.PNG" alt="">
                     </div>
                 </div>
             </div>
@@ -51,12 +45,12 @@ export default {
     },
     head() {
         return {
-            title: "Authors In Town",
+            title: "Table Picking React App",
             meta: [
                 {
-                    hid: "Authors In Town",
-                    name: "Authors In Town",
-                    content: `AuthorsInTown is built with React/Redux/Redis and uses the goodreads api to find a users favourite authors and then shows local events they might be interested in.`
+                    hid: "Table Picking React App",
+                    name: "Table Picking React App",
+                    content: `A simple React App that allows users to pick where they want to go for lunch. The app hits the foursquare API and gets 3 options for where to go and then users can vote on which one they want.`
                 }
             ]
         };

@@ -26,6 +26,24 @@ const createStore = () => {
                     description: "A social network for the website DizzyFrinks.com built with React, Redux and Socket.io"
                 },
                 {
+                    title: "Petition site",
+                    link: "/petition",
+                    stack: ["Javascript", "Node.js", "Handlebars", "PostgreSQL"],
+                    description: "A petition site built with NodeJS and Handlebars"
+                },
+                {
+                    title: "Connect 4",
+                    link: "/connect4",
+                    stack: ["Javascript", "jQuery"],
+                    description: "Connect 4 built with jQuery"
+                },
+                {
+                    title: "Table Picking React App",
+                    link: "/tablepicking",
+                    stack: ["Javascript", "React"],
+                    description: "A simple React App that allows users to pick where they want to go for lunch. The app hits the foursquare API and gets 3 options for where to go and then users can vote on which one they want."
+                },
+                {
                     title: "PWAnderson",
                     link: "/pwanderson",
                     stack: ["Javascript", "Vue", "TailwindCSS", "Nuxt.js", "AWS", "Vuex"],

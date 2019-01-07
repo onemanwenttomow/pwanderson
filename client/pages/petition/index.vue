@@ -4,25 +4,27 @@
             <leftchevron />
             <div class="w-3/4 h-12">
                 <div class="individual-project">
-                    <h1>Authors In Town</h1>
-                    <p class="project-description">AuthorsInTown is built with React/Redux/Redis and uses the goodreads api to find a users favourite authors and then shows local events they might be interested in. </p>
+                    <h1>Petition Site</h1>
+                    <p class="project-description">
+                        A petition site built with NodeJS and Handlebars.
+                    </p>
                     <div>
-                        <a class="inline" href="https://github.com/onemanwenttomow/authors-in-town">
+                        <a class="inline" href="https://github.com/onemanwenttomow/petition">
                             <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
                                 View code on GitHub
                             </button>
                         </a>
-                        <a class="inline" href="https://authorsintown.herokuapp.com/">
+                        <a class="inline" href="https://peterspetition.herokuapp.com/register">
                             <button class="inline bg-grey hover:bg-pink text-white font-bold py-2 px-4 rounded">
                                 Visit Site
                             </button>
                         </a>
                     </div>
                     <div class="image-container">
-                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownpreview-min.PNG" alt="">
+                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/petition-preview-min.PNG" alt="">
                     </div>
                     <div class="image-container">
-                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/authorsintownloggedin-min.PNG" alt="">
+                        <img class="project-image" src="https://s3.amazonaws.com/pwanderson/sigpage-min.PNG" alt="">
                     </div>
                 </div>
             </div>
@@ -51,12 +53,12 @@ export default {
     },
     head() {
         return {
-            title: "Authors In Town",
+            title: "Petition Site",
             meta: [
                 {
-                    hid: "Authors In Town",
-                    name: "Authors In Town",
-                    content: `AuthorsInTown is built with React/Redux/Redis and uses the goodreads api to find a users favourite authors and then shows local events they might be interested in.`
+                    hid: "Petition Site",
+                    name: "Petition Site",
+                    content: `A petition site built with NodeJS and Handlebars.`
                 }
             ]
         };

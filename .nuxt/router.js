@@ -4,10 +4,13 @@ import { interopDefault } from './utils'
 
 const _4c24f6ba = () => interopDefault(import('../client/pages/about/index.vue' /* webpackChunkName: "pages/about/index" */))
 const _740db22c = () => interopDefault(import('../client/pages/authorsintown/index.vue' /* webpackChunkName: "pages/authorsintown/index" */))
+const _524e14da = () => interopDefault(import('../client/pages/connect4/index.vue' /* webpackChunkName: "pages/connect4/index" */))
 const _395f38bc = () => interopDefault(import('../client/pages/cv/index.vue' /* webpackChunkName: "pages/cv/index" */))
 const _2d34554c = () => interopDefault(import('../client/pages/dizzyfrinks/index.vue' /* webpackChunkName: "pages/dizzyfrinks/index" */))
 const _1259f324 = () => interopDefault(import('../client/pages/legalstuff/index.vue' /* webpackChunkName: "pages/legalstuff/index" */))
+const _c7abbd72 = () => interopDefault(import('../client/pages/petition/index.vue' /* webpackChunkName: "pages/petition/index" */))
 const _0db5a5c4 = () => interopDefault(import('../client/pages/pwanderson/index.vue' /* webpackChunkName: "pages/pwanderson/index" */))
+const _7ac44b5c = () => interopDefault(import('../client/pages/tablepicking/index.vue' /* webpackChunkName: "pages/tablepicking/index" */))
 const _69c214b5 = () => interopDefault(import('../client/pages/tartanbored/index.vue' /* webpackChunkName: "pages/tartanbored/index" */))
 const _5e5a803c = () => interopDefault(import('../client/pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -77,6 +80,10 @@ export function createRouter() {
       component: _740db22c,
       name: "authorsintown"
     }, {
+      path: "/connect4",
+      component: _524e14da,
+      name: "connect4"
+    }, {
       path: "/cv",
       component: _395f38bc,
       name: "cv"
@@ -89,9 +96,17 @@ export function createRouter() {
       component: _1259f324,
       name: "legalstuff"
     }, {
+      path: "/petition",
+      component: _c7abbd72,
+      name: "petition"
+    }, {
       path: "/pwanderson",
       component: _0db5a5c4,
       name: "pwanderson"
+    }, {
+      path: "/tablepicking",
+      component: _7ac44b5c,
+      name: "tablepicking"
     }, {
       path: "/tartanbored",
       component: _69c214b5,
