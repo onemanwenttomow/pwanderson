@@ -2,7 +2,13 @@
     <div class="about flex h-screen">
         <div>
             <h1 class="">More about me</h1>
-            <p class="pt-3">I am a web developer based in Berlin which a special focus on Javascript. Currently love playing with Vue, Nuxt.js, React and React-Native</p>
+            <div class="flex pt-3">
+                <p class="">I am a web developer based in Berlin which a special focus on Javascript. Currently love playing with Vue, Nuxt.js, React and React-Native</p>
+                <!-- <div class="shadow h-36 w-36">
+                    <img class="" src="https://s3.amazonaws.com/pwanderson/avatar.png" alt="">
+                </div> -->
+            </div>
+
         </div>
 
     </div>
