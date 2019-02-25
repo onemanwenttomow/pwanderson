@@ -8,7 +8,7 @@ module.exports = {
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
             { hid: 'description', name: 'description', content: 'PWAnderson.com - Full Stack Developer - Berlin' },
-            { hid:'og:image', name:'og:image', content:'http://euro-travel-example.com/thumbnail.jpg'}
+            { hid:'og:image', property:'og:image', content:'https://s3.amazonaws.com/pwanderson/pwanderson.PNG'}
 
         ],
         link: [
