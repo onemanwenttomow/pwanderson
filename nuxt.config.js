@@ -7,7 +7,9 @@ module.exports = {
         meta: [
             { charset: 'utf-8' },
             { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-            { hid: 'description', name: 'description', content: 'PWAnderson.com - Full Stack Developer - Berlin' }
+            { hid: 'description', name: 'description', content: 'PWAnderson.com - Full Stack Developer - Berlin' },
+            { hid:'og:image', name:'og:image', content:'http://euro-travel-example.com/thumbnail.jpg'}
+
         ],
         link: [
             { rel: 'apple-touch-icon', sizes: '180x180', href: 'https://s3.amazonaws.com/pwanderson/apple-touch-icon.png'},
