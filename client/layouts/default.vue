@@ -31,7 +31,6 @@ body {
 
 #nav {
     background-color: #928a97;
-    height: 5vh;
     color: #fbe8d3;
 }
 
