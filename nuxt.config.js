@@ -31,5 +31,6 @@ module.exports = {
     router: {
         base: `/`
     },
+    plugins: ['~plugins/vue-scrollto.js'],
     dev: false
 };

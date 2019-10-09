@@ -217,4 +217,11 @@ ul { padding: 0; }
     -webkit-user-select:none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
 }
 
+@media screen and (min-width: 320px) and (max-width: 667px) {
+
+    .projects {
+        min-height: 100vh;
+    }
+}
+
 </style>

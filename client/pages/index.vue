@@ -4,7 +4,7 @@
             <div class="flex flex-wrap overflow-hidden">
 
                 <div class="absolute down-chevron md:hidden">
-                    <a href="#stack" >
+                    <a href="#" v-scroll-to="'#stack'">
                         <i class="fas fa-chevron-down fa-2x"></i>
                     </a>
                 </div>
