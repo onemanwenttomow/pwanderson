@@ -3,8 +3,11 @@ app: serverless-portfolio-app
 # Welcome to Serverless!
 service: serverless-portfolio
 provider:
+  apiGateway:
+    shouldStartNameWithService:
+      true
   name: aws
-  runtime: nodejs8.10
+  runtime: nodejs12.x
   stage: ${self:custom.secrets.NODE_ENV}
   region: us-east-1
   environment:

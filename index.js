@@ -1,8 +1,8 @@
 // index.js
-const sls = require('serverless-http')
-const binaryMimeTypes = require('./binaryMimeTypes')
+const sls = require("serverless-http");
+const binaryMimeTypes = require("./binaryMimeTypes");
 
-const nuxt = require('./nuxt')
+const nuxt = require("./nuxt");
 module.exports.nuxt = sls(nuxt, {
-  binary: binaryMimeTypes
-})
+    binary: binaryMimeTypes
+});

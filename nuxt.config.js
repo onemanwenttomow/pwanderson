@@ -23,7 +23,6 @@ module.exports = {
         vendor: ['axios'],
         publicPath: `/${require('./secrets.json').NODE_ENV}/_nuxt/`
     },
-    css: ['~/assets/css/tailwind.css' ],
     srcDir: 'client/',
     performance: {
         gzip: false
@@ -31,6 +30,6 @@ module.exports = {
     router: {
         base: `/`
     },
-    plugins: ['~plugins/vue-scrollto.js'],
+    plugins: [],
     dev: false
 };
